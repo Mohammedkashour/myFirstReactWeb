@@ -40,9 +40,8 @@ class Contact extends Component {
     }
 
     handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
         this.props.resetFeedbackForm();
+        this.props.postFeedback();
     }
 
     render() {
@@ -83,7 +82,7 @@ class Contact extends Component {
                     <Form model="feedbackForm" onSubmit={values => this.handleSubmit(values)}>                                <Row className="form-group">
                                 <Label htmlFor="firstName" md={2}>First Name</Label>
                                 <Col md={10}>
-                                    <Control.text model=".firstName" id="firstName" name="firstName"
+                                    <Control.Text model=".firstName" id="firstName" name="firstName"
                                         placeholder="First Name"
                                         className="form-control"
                                         validators={{
@@ -108,7 +107,7 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="lastName" md={2}>Last Name</Label>
                                 <Col md={10}>
-                                    <Control.text model=".lastName" id="lastName" name="lastName"
+                                    <Control.Text model=".lastName" id="lastName" name="lastName"
                                         placeholder="Last Name"
                                         className="form-control"
                                         validators={{
@@ -133,7 +132,7 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="phoneNum" md={2}>Phone</Label>
                                 <Col md={10}>
-                                    <Control.text model=".phoneNum" id="phoneNum" name="phoneNum"
+                                    <Control.Text model=".phoneNum" id="phoneNum" name="phoneNum"
                                         placeholder="Phone number"
                                         className="form-control"
                                         validators={{
@@ -160,7 +159,7 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="email" md={2}>Email</Label>
                                 <Col md={10}>
-                                    <Control.text model=".email" id="email" name="email"
+                                    <Control.Text model=".email" id="email" name="email"
                                         placeholder="Email"
                                         className="form-control"
                                         validators={{
@@ -183,7 +182,7 @@ class Contact extends Component {
                             <Row className="form-group">
                                 <Label htmlFor="feedback" md={2}>Your Feedback</Label>
                                 <Col md={10}>
-                                    <Control.textarea model=".feedback" id="feedback" name="feedback"
+                                    <Control.Textarea model=".feedback" id="feedback" name="feedback"
                                         rows="12"
                                         className="form-control"
                                     />
